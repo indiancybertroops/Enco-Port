@@ -1,17 +1,6 @@
 import socket
 import sys
 from tabulate import tabulate
-
-# Get website from user input
-website = input("Enter website URL: ")
-
-# Create list of commonly used ports to scan
-ports = [21, 22, 23, 25, 53, 80, 110, 135, 139, 143, 443, 445, 1433, 3306, 3389]
-
-# Initialize list to store results
-results = []
-
-# ASCII art banner
 print(r"""
 
 ██████╗  ██████╗ ██████╗ ████████╗   ███████╗███╗   ██╗ ██████╗ ██████╗ 
@@ -25,6 +14,16 @@ print(r"""
   Lightweight Port Scanner
   Desined By : Indian Cyber Troops With Love                              
 """)
+# Get website from user input
+website = input("Enter website URL: ")
+
+# Create list of commonly used ports to scan
+ports = [21, 22, 23, 25, 53, 80, 110, 135, 139, 143, 443, 445, 1433, 3306, 3389]
+
+# Initialize list to store results
+results = []
+
+
 
 # Loop through ports and attempt to connect to each one
 for port in ports:
