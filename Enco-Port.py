@@ -63,11 +63,7 @@ for port in ports:
 table_headers = ["Port", "Service", "Status"]
 print(tabulate(results, headers=table_headers))
 
-# Add beware message
-print("\nBeware: The results may include potentially dangerous information. Use at your own risk.")
-# print results in table format
-table_headers = ["Port", "Service", "Status"]
-print(tabulate(results, headers=table_headers))
+
 
 save = input("Do you want to save results to a text file? (Y/N)").lower()
 
@@ -76,5 +72,4 @@ if save == "y":
     filename = website + ".txt"
     print(colored(f"Results saved to file: {filename}", "blue"))
 else:
-    print("Results not saved.")
     print(colored(f"Results not saved", "red"))
